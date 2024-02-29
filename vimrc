@@ -165,6 +165,8 @@ vno <up> <Nop>
 " scroll multiple lines
 :nnoremap <C-E> 10<C-E>
 :nnoremap <C-Y> 10<C-Y>
+:xnoremap <C-E> 10<C-E>
+:xnoremap <C-Y> 10<C-Y>
 
 " keep 5 lines before and after cursor
 set scrolloff=5
