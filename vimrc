@@ -124,6 +124,7 @@ set colorcolumn=79
 " set folding
 set foldmethod=indent
 set foldlevelstart=99
+set foldignore=
 
 " changing cursor with mode
 let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
