@@ -29,7 +29,9 @@ if [ -d .venv ]; then
 if [ -f "$VIRTUAL_ENV/../.env" ] ; then
     while IFS= read -r line; do
         if [ ! -z "$line" ] ; then
-            export "$line"
+            if [[ ! "$line" == \#* ]] ; then
+                export "$line"
+            fi
         fi
     done < "$VIRTUAL_ENV/../.env"
 fi
