@@ -1,15 +1,19 @@
 line-length = 79
+
+[lint]
 # Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
 select = [
 "F", "E", "C90", "I", "N", "D", "UP", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "AIR", "RUF"
 ]
 
 ignore = [
+    "ANN101",  # Missing type annotation for `self` in method
     "PLR2004",  # Magic value used in comparison, consider replacing with a constant variable
     "D202",  # No blank lines allowed after function docstring
     "D203",  # one-blank-line-before-class
     "D212",  # multi-line-summary-second-line
     "D300", # Use triple double quotes `"""`
+    "FA100",  # Missing `from __future__ import annotations`, but uses `typing.Union`
     "RET504",  # Unnecessary variable assignment before `return` statement
 ]
 
@@ -40,7 +44,7 @@ exclude = [
 flake8-quotes.inline-quotes = "single"
 flake8-quotes.docstring-quotes = "single"
 
-[per-file-ignores]
+[lint.per-file-ignores]
 "tests/**.py" = [
     "D",
     "ANN",
@@ -49,7 +53,8 @@ flake8-quotes.docstring-quotes = "single"
     "SLF001",  # Private member accessed
     "S311",  # Standard pseudo-random generators aren't good for cryptography
 ]
-"*/__init__.py" = ["D"]
+"merp/migration/**.py" = ["D", "INP001"]
+"*/__init__.py" = ["D", "F401"]
 
-[mccabe]
+[lint.mccabe]
 max-complexity = 5
