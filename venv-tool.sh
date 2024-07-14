@@ -9,8 +9,8 @@ set -e
 echo "== Virtual env tool =="
 
 if [ ! -d .venv ]; then
-    echo "Creating virtual enviroment - python3.11"
-    python3.11 -m venv .venv
+    echo "Creating virtual enviroment - python3.12"
+    python3.12 -m venv .venv
     
     echo "Creating shortcut to activate"
     ln -s .venv/bin/activate activate || echo "Activate already exists"
