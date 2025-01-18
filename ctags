@@ -1,0 +1,4 @@
+--recurse=yes
+--languages=Python
+--langmap=Python:.py
+--exclude=__pycache__

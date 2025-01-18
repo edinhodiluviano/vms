@@ -14,6 +14,11 @@ ln -s $SCRIPT_DIR/vimrc $HOME/.vimrc
 ln -s $SCRIPT_DIR/pythonrc $HOME/.pythonrc
 
 
+echo "Linking ctags"
+mkdir $XDG_CONFIG_HOME/ctags
+ln -s $SCRIPT_DIR/ctags $XDG_CONFIG_HOME/ctags/config.ctags
+
+
 echo "Linking venv-tool and pycache-remover"
 mkdir -p $HOME/.local/bin
 ln -s $SCRIPT_DIR/venv-tool.sh $HOME/.local/bin/venv-tool
