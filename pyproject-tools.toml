@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+addopts = "-vvv --cov-report=term-missing --cov="
+testpaths = ["tests"]
+log_level = "DEBUG"
+filterwarnings = [
+    'ignore:Dialect sqlite\+pysqlite does \*not\* support Decimal:sqlalchemy.exc.SAWarning',
+]
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
