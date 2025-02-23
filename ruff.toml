@@ -6,18 +6,18 @@ select = [
 ]
 
 ignore = [
-    "PLR2004",  # Magic value used in comparison, consider replacing with a constant variable
+    "ANN401",   # Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
     "D107",     # Missing docstring in `__init__`
     "D202",     # No blank lines allowed after function docstring
     "D203",     # one-blank-line-before-class
     "D212",     # multi-line-summary-second-line
+    "G004",     # Logging statement uses f-string
+    "PLR2004",  # Magic value used in comparison, consider replacing with a constant variable
+    "PTH123",   # `open()` should be replaced by `Path.open()`
     "Q002",     # Double quote docstring found but single quotes preferred
     "RET504",   # Unnecessary variable assignment before `return` statement
-    "ANN401",   # Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
-    "PTH123",   # `open()` should be replaced by `Path.open()`
-    "G004",     # Logging statement uses f-string
-    "TCH002",   # Move third-party import into a type-checking block
-    "TCH003"    # Move standard library import into a type-checking block
+    "TC002",   # Move third-party import into a type-checking block
+    "TC003"    # Move standard library import into a type-checking block
 ]
 
 # Exclude a variety of commonly ignored directories.
