@@ -352,3 +352,17 @@ function! Tab2to4()
     :set ts=4 sts=4 et
     :retab
 endfunction
+
+function! Tab4to2()
+    :set ts=4 sts=4 noet
+    :retab!
+    :set ts=2 sts=2 et
+    :retab
+endfunction
+
+
+augroup MarkdownSyntaxCustomization
+    autocmd!
+    autocmd Syntax markdown syntax match markdownIgnore '\w_\w'
+    autocmd Syntax markdown syntax match markdownIgnore '  $'
+augroup END
