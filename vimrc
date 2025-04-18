@@ -107,7 +107,7 @@ augroup my_colorschemes
     " Flagging Unnecessary Whitespace
     " highlight BadWhitespace ctermbg=124
     autocmd InsertEnter,InsertLeave,WinEnter,BufRead
-        \ *.py,*.pyw,*.c,*.cpp,*.h,*.hpp,*.sql,*.yml,*.yaml,*.toml
+        \ *.py,*.pyw,*.c,*.cpp,*.h,*.hpp,*.html,*.sql,*.yml,*.yaml,*.toml
         \ match BadWhitespace /\s\+$/
 
 augroup END
