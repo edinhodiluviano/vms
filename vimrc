@@ -366,3 +366,6 @@ augroup MarkdownSyntaxCustomization
     autocmd Syntax markdown syntax match markdownIgnore '\w_\w'
     autocmd Syntax markdown syntax match markdownIgnore '  $'
 augroup END
+
+
+:syntax off
