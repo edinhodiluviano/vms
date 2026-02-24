@@ -22,7 +22,8 @@ ln -s $SCRIPT_DIR/ctags $XDG_CONFIG_HOME/ctags/config.ctags
 echo "Linking venv-tool and pycache-remover"
 mkdir -p $HOME/.local/bin
 ln -s $SCRIPT_DIR/venv-tool.sh $HOME/.local/bin/venv-tool
-ln -s $SCRIPT_DIR/pycache-remover.sh $HOME/.local/bin/pycache-remover
+ln -s $SCRIPT_DIR/clean-pycache.sh $HOME/.local/bin/clean-pycache
+ln -s $SCRIPT_DIR/clean-vimswap.sh $HOME/.local/bin/clean-vimswap
 
 
 echo "Copying ssh and sshd config files"
