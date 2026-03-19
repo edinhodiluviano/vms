@@ -4,17 +4,25 @@
 set -e
 
 
+# Use the first argument if provided, otherwise use the default
+PYTHON_VERSION="${1:-3.13}"
+PYTHON_CMD="python${PYTHON_VERSION}"
+
+
 # creates a python virtual enviroment in current folder
 
 echo "== Virtual env tool =="
 
 if [ ! -d .venv ]; then
-    echo "Creating virtual enviroment - python3.13"
-    python3.13 -m venv .venv
+    echo "Creating virtual environment - $PYTHON_CMD"
+    "$PYTHON_CMD" -m venv .venv
     
     echo "Creating shortcut to activate"
     ln -s .venv/bin/activate activate || echo "Activate already exists"
+else
+    echo "Directory .venv already exists."
 fi
+
 
 echo "Upgrading pip"
 source activate && pip install --upgrade pip
